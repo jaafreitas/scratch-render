@@ -6,6 +6,8 @@ class CanvasMeasurementProvider {
     constructor (ctx) {
         this._ctx = ctx;
         this._cache = {};
+        this._font = 'sans-serif';
+        this._fontSize = 14;
     }
 
 
@@ -15,15 +17,22 @@ class CanvasMeasurementProvider {
      * Called by the TextWrapper before a batch of zero or more calls to measureText().
      */
     beginMeasurementSession () {
-        
+
     }
 
     /**
      * Called by the TextWrapper after a batch of zero or more calls to measureText().
      */
     endMeasurementSession () {
-        
+
     }
+
+    setFontAndSize (font, fontSize) {
+        this._font = font;
+        this._fontSize = fontSize;
+        this._ctx.font = `${fontSize}px ${font}, sans-serif`;
+    }
+
 
     /**
      * Measure a whole string as one unit.

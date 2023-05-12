@@ -35,7 +35,7 @@ class TextWrapper {
      * @param {string} text - the text to be wrapped. Will be split on whitespace.
      * @returns {Array.<string>} an array containing the wrapped lines of text.
      */
-    wrapText (maxWidth, text) {
+    wrapText (maxWidth, text, fontSize, font) {
         // Normalize to canonical composition (see Unicode Standard Annex (UAX) #15)
         text = text.normalize();
 
@@ -45,6 +45,8 @@ class TextWrapper {
         }
 
         const measurementSession = this._measurementProvider.beginMeasurementSession();
+
+        this._measurementProvider.setFontAndSize(font, fontSize);
 
         const breaker = new LineBreaker(text);
         let lastPosition = 0;

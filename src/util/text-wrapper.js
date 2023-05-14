@@ -33,6 +33,8 @@ class TextWrapper {
      * Wrap the provided text into lines restricted to a maximum width. See Unicode Standard Annex (UAX) #14.
      * @param {number} maxWidth - the maximum allowed width of a line.
      * @param {string} text - the text to be wrapped. Will be split on whitespace.
+     * @param {number} fontSize - the font size.
+     * @param {string} font - the font name.
      * @returns {Array.<string>} an array containing the wrapped lines of text.
      */
     wrapText (maxWidth, text, fontSize, font) {

@@ -69,7 +69,7 @@ class TextCostumeSkin extends Skin {
     }
 
     /**
-     * @return {Array<number>} the dimensions, in Scratch units, of this skin.
+     * @param {textState} textState - textState
      */
     setTextAndStyle (textState) {
         this._text = textState.text;
@@ -98,6 +98,7 @@ class TextCostumeSkin extends Skin {
 
     /**
      * Update the array of wrapped lines and the text dimensions.
+     * @param {number} scale The scale to render the text at
      */
     _reflowLines (scale) {
         let maxWidth = this.style.MAX_LINE_WIDTH;

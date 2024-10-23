@@ -1,12 +1,13 @@
 ## scratch-render
 #### WebGL-based rendering engine for Scratch 3.0
 
-[![Build Status](https://travis-ci.org/LLK/scratch-render.svg?branch=develop)](https://travis-ci.org/LLK/scratch-render)
+[![CircleCI](https://circleci.com/gh/LLK/scratch-render/tree/develop.svg?style=shield&circle-token=310da166a745295d515b3b90f3bad10f23b84405)](https://circleci.com/gh/LLK/scratch-render?branch=develop)
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/LLK/scratch-render.svg)](https://greenkeeper.io/)
 
 ## Installation
 ```bash
-npm install https://github.com/LLK/scratch-render.git
+npm install https://github.com/scratchfoundation/scratch-render.git
 ```
 
 ## Setup
@@ -67,3 +68,20 @@ npm test
 
 ## Donate
 We provide [Scratch](https://scratch.mit.edu) free of charge, and want to keep it that way! Please consider making a [donation](https://secure.donationpay.org/scratchfoundation/) to support our continued engineering, design, community, and resource development efforts. Donations of any size are appreciated. Thank you!
+
+## Committing
+
+This project uses [semantic release](https://github.com/semantic-release/semantic-release) to ensure version bumps
+follow semver so that projects depending on it don't break unexpectedly.
+
+In order to automatically determine version updates, semantic release expects commit messages to follow the
+[conventional-changelog](https://github.com/bcoe/conventional-changelog-standard/blob/master/convention.md)
+specification.
+
+You can use the [commitizen CLI](https://github.com/commitizen/cz-cli) to make commits formatted in this way:
+
+```bash
+npm install -g commitizen@latest cz-conventional-changelog@latest
+```
+
+Now you're ready to make commits using `git cz`.

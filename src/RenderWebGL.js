@@ -763,13 +763,13 @@ class RenderWebGL extends EventEmitter {
     }
 
     /**
-     * Get the max scale the skin prefers. Only relevant for 
+     * Get the max scale the skin prefers. Only relevant for
      * skins that have do not scale up normally, like reflowing text.
      * @param {int} drawableID The ID of the Drawable to measure.
      * @return {number} Max scale preferred by the skin, or null.
      */
-    getCurrentSkinMaxScale(drawableID) {
-        var drawable = this._allDrawables[drawableID];
+    getCurrentSkinMaxScale (drawableID) {
+        const drawable = this._allDrawables[drawableID];
         return this._allSkins[drawable.skin.id].maxScale;
     }
 
